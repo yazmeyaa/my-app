@@ -39,7 +39,8 @@ export default async function getWeatherByIP(req: NextApiRequest, res: NextApiRe
                 debug(responseError.message)
                 return res.status(400).send({
                     error: 'something wrong',
-                    errorMessage: responseError.message
+                    errorMessage: responseError.message,
+                    ip: clientIPaddress.address
                 })
             }
         })
