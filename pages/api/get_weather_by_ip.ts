@@ -26,6 +26,9 @@ export default async function getWeatherByIP(req: NextApiRequest, res: NextApiRe
             key: secretAPIkey,
             lang: 'ru',
             q: clientIPaddress
+        },
+        headers: {
+            "Accept-Encoding": "*"
         }
     })
         .then(data => {

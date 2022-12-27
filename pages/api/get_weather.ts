@@ -24,13 +24,15 @@ export default async function getWeatherByCityName(req: NextApiRequest, res: Nex
             key: secretAPIkey,
             lang: 'ru',
             q: city
+        },
+        headers: {
+            "Accept-Encoding": "*"
         }
     })
         .then(data => {
             return res.status(200).send(data.data)
         })
         .catch(responseError => {
-            console.log(responseError)
             if (axios.isAxiosError(responseError)) {
                 debug(responseError.message)
                 return res.status(400).send({
