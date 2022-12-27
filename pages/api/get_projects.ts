@@ -1,3 +1,4 @@
+import axios from "axios";
 import { NextApiRequest, NextApiResponse } from "next";
 import { StaticImageData } from "next/image";
 
@@ -26,7 +27,7 @@ const cards: CardInterface[] = [
         name: 'Скринер',
         description: 'Получение случайных изображений с интервалом',
         href: 'https://itracers.xyz/temp/yazmeyaa/screens/',
-        previewImage: require('assets/images/aita_bot.png').default
+        previewImage: require('assets/images/images.png').default
     },
     {
         name: 'Звёзды',
@@ -52,5 +53,9 @@ export default function handler(
     _: NextApiRequest,
     res: NextApiResponse
 ) {
+    axios({
+        method: 'GET',
+
+    })
     res.status(200).send(JSON.stringify(cards))
 }
