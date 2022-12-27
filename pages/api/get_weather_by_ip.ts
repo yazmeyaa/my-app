@@ -2,14 +2,22 @@ import axios from 'axios'
 import { AddressInfo, isIP } from 'net'
 import { NextApiRequest, NextApiResponse } from 'next'
 import debug from '@utils/addPrefixToLog'
+import requestIp from 'request-ip'
 
 
 export default async function getWeatherByIP(req: NextApiRequest, res: NextApiResponse) {
 
     const secretAPIkey = process.env.WEATHER_API_KEY
-    const clientIPaddress = req.socket.address() as AddressInfo
+    const clientIPaddress = requestIp.getClientIp(req)
 
-    if (!isIP(clientIPaddress.address)) {
+    if(!clientIPaddress) {
+        debug(`No ip address: ${clientIPaddress}`)
+        return res.status(400).send({
+            error: 'Internal error'
+        })
+    }
+
+    if (!isIP(clientIPaddress)) {
         debug(`wrong ip address recieved ${clientIPaddress}`)
         return res.status(400).send({ error: 'wrong ip address recieved' })
     }
@@ -25,7 +33,7 @@ export default async function getWeatherByIP(req: NextApiRequest, res: NextApiRe
         params: {
             key: secretAPIkey,
             lang: 'ru',
-            q: clientIPaddress.address
+            q: clientIPaddress
         },
         headers: {
             "Accept-Encoding": "*"
@@ -40,7 +48,7 @@ export default async function getWeatherByIP(req: NextApiRequest, res: NextApiRe
                 return res.status(400).send({
                     error: 'something wrong',
                     errorMessage: responseError.message,
-                    ip: clientIPaddress.address
+                    ip: clientIPaddress
                 })
             }
         })
