@@ -27,7 +27,7 @@ const cards: CardInterface[] = [
         name: 'Скринер',
         description: 'Получение случайных изображений с интервалом',
         href: 'https://itracers.xyz/temp/yazmeyaa/screens/',
-        previewImage: require('assets/images/images.png').default
+        previewImage: require('assets/images/screener.png').default
     },
     {
         name: 'Звёзды',
@@ -53,9 +53,5 @@ export default function handler(
     _: NextApiRequest,
     res: NextApiResponse
 ) {
-    axios({
-        method: 'GET',
-
-    })
     res.status(200).send(JSON.stringify(cards))
 }
