@@ -1,6 +1,6 @@
 import { Card } from "@components/projects_card"
 import { StaticImageData } from "next/image"
-import React from "react"
+import React, { useEffect, useState } from "react"
 
 interface CardInterface {
     name: string
@@ -13,8 +13,14 @@ interface ProjectsProps {
     cards: CardInterface[]
 }
 
-export default function Projects({ cards }: ProjectsProps) {
-    return <CardsComponent cards={cards} />
+export default function Projects() {
+    const [projectList, setProjectList] = useState<CardInterface[]>([])
+    useEffect(() => {
+        fetch('/api/get_projects')
+            .then(data => data.json())
+            .then(setProjectList)
+    }, [])
+    return <CardsComponent cards={projectList} />
 }
 
 
@@ -28,14 +34,4 @@ function CardsComponent({ cards }: CardsProps) {
             {cards.map((item, index) => <Card key={index} name={item.name} description={item.description} href={item.href} img={item.previewImage} />)}
         </React.Fragment>
     )
-}
-
-export async function getStaticProps() {
-    const response = await fetch(`http://localhost:3000/api/get_projects`)
-    const cards = await response.json() as CardInterface[]
-    return {
-        props: {
-            cards
-        }
-    }
 }

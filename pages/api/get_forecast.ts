@@ -35,6 +35,9 @@ export default async function hanlder(req: RequestWithData, res: NextApiResponse
             key: secretAPIkey,
             q: city,
             days: days
+        },
+        headers: {
+            "Accept-Encoding": "*"
         }
     })
         .then(data => {
