@@ -1,5 +1,5 @@
 import MyPhoto from 'public/images/my_photo.jpg'
-import { About, ContentContainer, DownloadButton, StyledImage } from "./styled";
+import { About, ContentContainer, DownloadButton, StyledImage } from "../styles/styled";
 
 export default function Home() {
   const now = new Date()
