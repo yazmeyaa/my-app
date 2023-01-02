@@ -1,23 +1,17 @@
-import Link from "next/link"
-import { Container, StyledLink, NavigationLinks, NavLinkItem, Title } from "./styled"
+import Link from 'next/link'
+import { Container, NavigationContainer, NavigationLink, NavigationList, StyledLogoLink, TextLogo } from "./styled"
 
 function Header() {
     return (
         <Container>
-            <Title>yazmeyaa</Title>
-            <nav>
-                <NavigationLinks>
-                        <StyledLink href={'/'}>
-                            <NavLinkItem>Главная</NavLinkItem>
-                        </StyledLink>
-                        <StyledLink href={'/projects'}>
-                            <NavLinkItem>Проекты</NavLinkItem>
-                        </StyledLink>
-                        <StyledLink href={'/contacts'}>
-                            <NavLinkItem>Контакты</NavLinkItem>
-                        </StyledLink>
-                </NavigationLinks>
-            </nav>
+            <StyledLogoLink href={'/'}><TextLogo>yazmeyaa</TextLogo></StyledLogoLink>
+            <NavigationContainer>
+                <NavigationList>
+                    <NavigationLink href={'/'}><li>Обо мне</li></NavigationLink>
+                    <NavigationLink href={'/projects'}><li>Проекты</li></NavigationLink>
+                    <NavigationLink href={'/contacts'}><li>Контакты</li></NavigationLink>
+                </NavigationList>
+            </NavigationContainer>
         </Container>
     )
 }
