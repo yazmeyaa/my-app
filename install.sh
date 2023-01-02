@@ -1,5 +1,6 @@
 #!/bin/bash
 pm2 stop "yazmeyaa_website"
+npm cache clear --force
 git pull
 npm install
 npm run build
