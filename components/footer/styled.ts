@@ -8,7 +8,7 @@ export const Container = styled.footer`
         
         @media screen and (max-width: 600px){
             display: block;
-            position: absolute;
+            position: sticky;
             bottom: 0;
             width: 100%;
             padding-top: 1rem;
