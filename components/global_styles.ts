@@ -15,4 +15,8 @@ export const GlobalStyles = createGlobalStyle`
             font-weight: 400;
             font-style: normal;
         }
+        body{
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
 `

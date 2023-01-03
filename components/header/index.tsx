@@ -1,7 +1,8 @@
-import Link from 'next/link'
+import { MouseEvent, useState } from "react"
 import { Container, NavigationContainer, NavigationLink, NavigationList, StyledLogoLink, TextLogo } from "./styled"
 
 function Header() {
+
     return (
         <Container>
             <StyledLogoLink href={'/'}><TextLogo>yazmeyaa</TextLogo></StyledLogoLink>
