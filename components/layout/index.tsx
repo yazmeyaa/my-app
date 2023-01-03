@@ -6,6 +6,7 @@ import { Footer } from "@components/footer"
 
 const RootComponent = styled.main`
     &{
+        position: relative;
         width: fit-content;
         margin: 0px auto;
         padding: 0px 2rem;

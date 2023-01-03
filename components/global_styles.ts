@@ -19,4 +19,8 @@ export const GlobalStyles = createGlobalStyle`
             overflow-x: hidden;
             min-height: 100vh;
         }
+        #__next{ 
+            min-height: 100vh;
+            height: 100%;
+        }
 `
