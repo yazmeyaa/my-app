@@ -8,6 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       <Head>
+        <meta name="google-site-verification" content="2j8vZlo7qxSwmNA-8j7nZumw04J6UltxwI7Ap4BvSGM" />
         <meta property="og:title" content="Евгений Антоненков, Fullstack-разработчик." />
         <meta property="og:description" content="С большим удовольствием готов принять участие в каком-нибудь проекте или обсудить любые другие вопросы." />
         <meta property="og:site_name" content="Евгений Антоненков"/>
