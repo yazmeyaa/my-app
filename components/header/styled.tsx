@@ -10,7 +10,7 @@ export const Container = styled.header`
         padding: 2rem 4rem;
 
         @media screen and (max-width: 600px) {
-            padding: 1rem 0px;
+            padding: 0.5rem 0px;
             justify-content: center;
         }
     }

@@ -11,7 +11,6 @@ const RootComponent = styled.main`
         margin: 0px auto;
         padding: 0px 2rem;
         flex: 1 0 auto;
-        margin-bottom: 2rem;
     }
 `
 

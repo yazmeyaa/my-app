@@ -13,6 +13,7 @@ export const ContentContainer = styled.section`
         @media screen and (max-width: 600px) {
             flex-direction: column-reverse;
             padding: 0px 6px;   
+            padding-bottom: 60px;
         }
     }
 `
