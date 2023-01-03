@@ -9,29 +9,22 @@ interface CardInterface {
     previewImage: StaticImageData
 }
 
-interface ProjectsProps {
-    cards: CardInterface[]
-}
-
-export default function Projects() {
+export default function CardsComponent() {
     const [projectList, setProjectList] = useState<CardInterface[]>([])
+    const [loading, setLoading] = useState<boolean>(false)
     useEffect(() => {
+        setLoading(true)
         fetch('/api/get_projects')
             .then(data => data.json())
-            .then(setProjectList)
+            .then(data => {
+                setProjectList(data)
+                setLoading(false)
+            })
     }, [])
-    return <CardsComponent cards={projectList} />
-}
 
-
-interface CardsProps {
-    cards: CardInterface[]
-}
-
-function CardsComponent({ cards }: CardsProps) {
     return (
         <React.Fragment>
-            {cards.map((item, index) => <Card key={index} name={item.name} description={item.description} href={item.href} img={item.previewImage} />)}
+            {loading ? 'LOADING' : projectList.map((item, index) => <Card key={index} name={item.name} description={item.description} href={item.href} img={item.previewImage} />)}
         </React.Fragment>
     )
 }

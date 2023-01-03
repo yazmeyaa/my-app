@@ -12,7 +12,7 @@ interface CardProps {
 function Card({ name, description, img, href }: CardProps) {
     return (
         <Container>
-            Hello, world!
+            {name}
         </Container>
     )
 }

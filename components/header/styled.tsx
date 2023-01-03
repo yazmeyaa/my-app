@@ -68,24 +68,3 @@ export const NavigationList = styled.ul`
 
     }
 `
-
-export const NavigationLink = styled(Link)`
-    &{
-        text-decoration: none;
-        font-family: 'open_sans_bold';
-    }
-    &:visited{
-        color: inherit;
-    }
-    &::after {
-        content: '';
-        width: 0px;
-        height: 2px;
-        display: block;
-        background: black;
-        transition: 0.3s;
-    }
-    &:hover::after {
-        width: 100%;
-    }
-`
