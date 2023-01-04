@@ -1,4 +1,4 @@
-import { Button, ContactsBlock, Container, Form, TextArea, TextField } from "./styled"
+import { Button, ContactsBlock, Container, Form, TextArea, TextField } from "styles/contacts"
 import Telegram from 'assets/icons/telegram.svg'
 import VK from 'assets/icons/vk.svg'
 import Mail from 'assets/icons/mail.svg'
