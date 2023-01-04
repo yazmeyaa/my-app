@@ -3,9 +3,10 @@ import Telegram from 'assets/icons/telegram.svg'
 import VK from 'assets/icons/vk.svg'
 import Mail from 'assets/icons/mail.svg'
 import { GithubSVG } from "assets/icons/github"
-import { FormEvent, useState } from "react"
+import { FormEvent, Fragment, useState } from "react"
 import Link from "next/link"
 import axios from "axios"
+import Head from "next/head"
 
 function Contacts() {
     const [loading, setLoading] = useState<boolean>(false)
@@ -45,44 +46,57 @@ function Contacts() {
     }
 
     return (
-        <Container>
-            <ContactsBlock>
-                <Link href="https://t.me/future_undefined" target="_blank">
-                    <Telegram />
-                </Link>
-                <Link href="https://vk.com/yazmeyaaa" target="_blank">
-                    <VK />
-                </Link>
-                <Link href="mailto:evgenijantonenkov456@gmail.com" target="_blank">
-                    <Mail />
-                </Link>
-                <Link href="https://github.com/yazmeyaa" target="_blank">
-                    <GithubSVG />
-                </Link>
-            </ContactsBlock>
-            <Form onSubmit={handleSubmit}>
-                <label>
-                    <span>Имя</span>
-                    <TextField name="name" value={name} onChange={(event) => {
-                        setName(event.target.value)
-                    }} />
-                </label>
-                <label>
-                    <span>Email</span>
-                    <TextField name="email" value={email} onChange={(event) => {
-                        setEmail(event.target.value)
-                    }} />
-                </label>
-                <label>
-                    <span>Сообщение</span>
-                    <TextArea name="message" value={message} onChange={(event) => {
-                        setMessage(event.target.value)
-                    }} />
-                </label>
-                <Button type="submit">Свяжитесь со мной</Button>
-                {loading && 'Загрузка!'}
-            </Form>
-        </Container>
+        <Fragment>
+            <Head>
+                <meta property="og:title" content="Контакты" />
+                <meta property="og:description" content="Найти контакты или отправить сообщение. " />
+                <meta property="og:site_name" content="Евгений Антоненков" />
+                <meta property="og:url" content="https://yazmeyaa.itracers.xyz/" />
+                <meta property="og:type" content="article" />
+                <meta property="og:image" content="https://yazmeyaa.itracers.xyz/images/my_photo.jpg" />
+                <meta property="og:image:width" content="630" />
+                <meta property="og:image:height" content="630" />
+            </Head>
+            <Container>
+                <ContactsBlock>
+                    <Link href="https://t.me/future_undefined" target="_blank">
+                        <Telegram />
+                    </Link>
+                    <Link href="https://vk.com/yazmeyaaa" target="_blank">
+                        <VK />
+                    </Link>
+                    <Link href="mailto:evgenijantonenkov456@gmail.com" target="_blank">
+                        <Mail />
+                    </Link>
+                    <Link href="https://github.com/yazmeyaa" target="_blank">
+                        <GithubSVG />
+                    </Link>
+                </ContactsBlock>
+                <Form onSubmit={handleSubmit}>
+                    <label>
+                        <span>Имя</span>
+                        <TextField name="name" value={name} onChange={(event) => {
+                            setName(event.target.value)
+                        }} />
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <TextField name="email" value={email} onChange={(event) => {
+                            setEmail(event.target.value)
+                        }} />
+                    </label>
+                    <label>
+                        <span>Сообщение</span>
+                        <TextArea name="message" value={message} onChange={(event) => {
+                            setMessage(event.target.value)
+                        }} />
+                    </label>
+                    <Button type="submit">Свяжитесь со мной</Button>
+                    {loading && 'Загрузка!'}
+                </Form>
+            </Container>
+        </Fragment>
+
     )
 }
 

@@ -9,14 +9,6 @@ export default function App({ Component, pageProps }: AppProps) {
     <Layout>
       <Head>
         <meta name="google-site-verification" content="2j8vZlo7qxSwmNA-8j7nZumw04J6UltxwI7Ap4BvSGM" />
-        <meta property="og:title" content="Евгений Антоненков, Fullstack-разработчик." />
-        <meta property="og:description" content="С большим удовольствием готов принять участие в каком-нибудь проекте или обсудить любые другие вопросы." />
-        <meta property="og:site_name" content="Евгений Антоненков"/>
-        <meta property="og:url" content="https://yazmeyaa.itracers.xyz/" />
-        <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://yazmeyaa.itracers.xyz/images/my_photo.jpg" />
-        <meta property="og:image:width" content="630"/>
-        <meta property="og:image:height" content="630"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <title>YAZMEYAA</title>
       </Head>
