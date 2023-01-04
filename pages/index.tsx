@@ -3,7 +3,7 @@ import { About, ContentContainer, DownloadButton, StyledImage } from "../styles/
 
 export default function Home() {
   const now = new Date()
-  const birth = new Date('1998.06.14')
+  const birth = new Date('Sun Jun 14 1998 12:00:00 GMT+0400 (Москва, летнее время)')
   const currentYears = now.getFullYear() - birth.getFullYear()
   const correctedYears = now.getMonth() < 6 ? currentYears - 1 : currentYears
 

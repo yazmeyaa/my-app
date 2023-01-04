@@ -21,7 +21,15 @@ function Footer() {
     const router = useRouter()
     const mappedLinks = links.map((link, index) => {
         const isCurrentLink = link.href === router.pathname
-        return <NavigationLink color={'white'} key={index} href={link.href} current={isCurrentLink}>{link.text}</NavigationLink>
+        return (
+            <NavigationLink
+                color={'white'}
+                key={index}
+                href={link.href}
+                $current={Boolean(isCurrentLink)}>
+                {link.text}
+            </NavigationLink>
+        )
     })
 
     return (

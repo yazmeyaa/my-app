@@ -7,7 +7,7 @@ import { Footer } from "@components/footer"
 const RootComponent = styled.main`
     &{
         position: relative;
-        width: fit-content;
+        width: auto;
         margin: 0px auto;
         padding: 0px 2rem;
         flex: 1 0 auto;

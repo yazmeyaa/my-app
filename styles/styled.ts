@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Image from "next/image";
 import { fluidTypography } from '@utils/fluidTypography';
 
-export const ContentContainer = styled.section`
+export const ContentContainer = styled.article`
     &{
         display: flex;
         align-items: center;

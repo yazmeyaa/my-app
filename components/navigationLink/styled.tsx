@@ -2,13 +2,13 @@ import Link from "next/link"
 import styled from "styled-components"
 
 interface NavigationLinkProps {
-    current: boolean
+    $current: boolean
     color: string
 }
 
 export const NavigationLink = styled(Link) <NavigationLinkProps>`
     &{
-        text-decoration: ${props => { return props.current ? 'underline' : 'none' }};
+        text-decoration: ${props => { return props.$current ? 'underline' : 'none' }};
         text-decoration-thickness: 3px;
         font-family: 'open_sans_bold';
         color:  ${props => props.color};

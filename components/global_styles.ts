@@ -16,7 +16,6 @@ export const GlobalStyles = createGlobalStyle`
             font-style: normal;
         }
         body{
-            overflow-x: hidden;
             min-height: 100vh;
         }
         #__next{ 
