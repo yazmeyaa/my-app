@@ -9,6 +9,7 @@ export const Container = styled.article`
         align-items: center;
         gap: 3rem;
         width: 100%;
+        margin-bottom: 40px;
         @media screen and (max-width: 600px) {
         }
     }
@@ -18,9 +19,16 @@ export const ContactsBlock = styled.section`
     &{
         display: flex;
         gap: 12px;
+        align-items: center;
     }
     & > a {
         -webkit-tap-highlight-color: transparent;
+    }
+    & > a > svg {
+        transition: transform 0.2s ease-out;
+    }
+    & > a > svg:hover {
+        transform: scale(1.4);
     }
 `
 
@@ -30,6 +38,9 @@ export const Form = styled.form`
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        @media screen and (max-width: 600px) {
+            width: 100%;
+        }
         
     }
     & > label {
@@ -51,10 +62,20 @@ export const TextField = styled.input`
         padding: 12px 16px;
         width: 100%;
         font-size: 15px;
+        transition: border-color ease-out 0.2s;
     }
     &:focus{
-        outline: 2px solid black;
+        outline: 1px solid black;
     }
+    &:hover{
+        border-color: #686a6d;
+    }
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover, 
+    &:-webkit-autofill:focus, 
+    &:-webkit-autofill:active{
+    box-shadow: 0 0 0 30px white inset !important;
+}
 `
 
 export const TextArea = styled.textarea`
@@ -65,11 +86,17 @@ export const TextArea = styled.textarea`
         padding: 12px 16px;
         width: 100%;
         font-size: 15px;
+        transition: border-color ease-out 0.2s;
         resize: vertical;
+        
     }
     &:focus{
-        outline: 2px solid black;
+        outline: 1px solid black;
     }
+    &:hover{
+        border-color: #686a6d;
+    }
+
 `
 
 export const Button = styled.button`
@@ -82,4 +109,11 @@ export const Button = styled.button`
         border: 2px solid #8a8c8f;
     }
 
+`
+
+export const ErrorText = styled.p`
+    &{
+        color: #b40000;
+        font-size: 14px;
+    }
 `

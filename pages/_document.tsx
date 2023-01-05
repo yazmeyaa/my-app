@@ -7,6 +7,7 @@ export default function Document() {
         <link rel='preload' href='/fonts/OpenSans-Regular.ttf' as='font' type='font/ttf' crossOrigin='' />
       </Head>
       <body>
+        <div id="modal" />
         <Main />
         <NextScript />
       </body>

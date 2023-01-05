@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import MyPhoto from 'public/images/my_photo.jpg'
 import { Fragment } from 'react';
-import { About, ContentContainer, DownloadButton, StyledImage } from "styles";
+import { About, ContentContainer, DownloadButton, StyledImage } from "@components/_pages";
 
 export default function Home() {
   const now = new Date()

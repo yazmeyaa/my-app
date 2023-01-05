@@ -28,6 +28,7 @@ export default async function getWeatherByCityName(req: RequestWithBody, res: Ne
         polling: false
     })
     const data = req.body.data
+
     const fromWebMessage = `
 Отправитель: ${data.name}
 Почтовый адрес: ${data.email}
