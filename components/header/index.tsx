@@ -23,7 +23,7 @@ function Header() {
         const isCurrentLink = link.href === router.pathname
         return (
             <NavigationLink
-                color={'black'}
+                color='black'
                 key={index}
                 href={link.href}
                 $current={isCurrentLink}>

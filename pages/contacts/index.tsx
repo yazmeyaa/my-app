@@ -1,4 +1,4 @@
-import { Button, ContactsBlock, Container, ErrorText, Form, TextArea, TextField } from "@components/_pages/contacts"
+import { Button, ContactsBlock, Container, ErrorText, Form, FormTitle, TextArea, TextField } from "@components/_pages/contacts"
 import Telegram from 'assets/icons/telegram.svg'
 import VK from 'assets/icons/vk.svg'
 import Mail from 'assets/icons/mail.svg'
@@ -56,6 +56,7 @@ function Contacts() {
                     </Link>
                 </ContactsBlock>
                 <Form autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
+                    <FormTitle>Написать мне сообщение</FormTitle>
                     <label>
                         <span>Имя</span>
                         <TextField {...register("name", {
@@ -93,7 +94,7 @@ function Contacts() {
                         })} />
                         {formState.errors.message && <ErrorText>{formState.errors.message.message}</ErrorText>}
                     </label>
-                    <Button type="submit" disabled={formState.isSubmitting || !formState.isValid}>Свяжитесь со мной</Button>
+                    <Button type="submit" disabled={formState.isSubmitting || !formState.isValid}>Отправить</Button>
                     {false && 'Загрузка!'}
                 </Form>
             </Container>

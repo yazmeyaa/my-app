@@ -23,7 +23,7 @@ function Footer() {
         const isCurrentLink = link.href === router.pathname
         return (
             <NavigationLink
-                color={'white'}
+                color='white'
                 key={index}
                 href={link.href}
                 $current={Boolean(isCurrentLink)}>

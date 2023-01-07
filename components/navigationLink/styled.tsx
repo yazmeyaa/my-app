@@ -1,9 +1,12 @@
 import Link from "next/link"
 import styled from "styled-components"
+import { CSSProperties } from "react"
+
+type ColorType = CSSProperties['color']
 
 interface NavigationLinkProps {
     $current: boolean
-    color: string
+    color: ColorType
 }
 
 export const NavigationLink = styled(Link) <NavigationLinkProps>`

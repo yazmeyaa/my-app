@@ -1,13 +1,16 @@
-import { Card } from "@components/projects_card"
+import { Card } from '@components/_pages/card'
+import { CardsContainer, PageContainer, PageDescription, Title } from '@components/_pages/projects'
 import { StaticImageData } from "next/image"
-import React, { useEffect, useState } from "react"
+import { Fragment, useEffect, useState } from "react"
+
 
 interface CardInterface {
     name: string
     description: string
     href: string
-    previewImage: StaticImageData
+    img: StaticImageData
 }
+
 
 export default function CardsComponent() {
     const [projectList, setProjectList] = useState<CardInterface[]>([])
@@ -22,9 +25,18 @@ export default function CardsComponent() {
             })
     }, [])
 
+    const MappedCards = projectList.map((item, key) => {
+        return <Card key={key} {...item} />
+    })
+
+
     return (
-        <React.Fragment>
-            {loading ? 'LOADING' : projectList.map((item, index) => <Card key={index} name={item.name} description={item.description} href={item.href} img={item.previewImage} />)}
-        </React.Fragment>
+        <PageContainer>
+            <Title>Мои проекты</Title>
+            <PageDescription>Здесь находятся мои проекты: от самых новых, до самых старых.<br /> Да, они тут не все, потому что большинство я не нашёл силы закончить. :(</PageDescription>
+            <CardsContainer>
+                {loading ? <h1>Проекты загружаются...</h1> : MappedCards}
+            </CardsContainer>
+        </PageContainer>
     )
 }

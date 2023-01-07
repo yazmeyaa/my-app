@@ -1,3 +1,4 @@
+import { fluidTypography } from "@utils/fluidTypography";
 import styled from "styled-components";
 
 export const Container = styled.article`
@@ -53,10 +54,6 @@ export const Form = styled.form`
 
     }
 `
-
-interface TextFieldProps {
-    error: boolean
-}
 
 export const TextField = styled.input`
     &{
@@ -140,5 +137,12 @@ export const ErrorText = styled.p`
         animation-iteration-count: 1;
         animation-duration: 0.4s;
         animation-timing-function: ease-out;
+    }
+`
+
+export const FormTitle = styled.h2`
+    &{
+        font-size: ${fluidTypography(480, 1440, 16, 20)};
+        align-self: center;
     }
 `

@@ -67,7 +67,7 @@ export const DownloadButton = styled.a`
         color: white;
         padding: 12px 12px;
         cursor: pointer;
-        transition: 0.3s ease-out;
+        transition: 0.2s ease-out;
     
     }
     &:hover{
