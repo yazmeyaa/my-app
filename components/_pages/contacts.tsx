@@ -54,6 +54,10 @@ export const Form = styled.form`
     }
 `
 
+interface TextFieldProps {
+    error: boolean
+}
+
 export const TextField = styled.input`
     &{
         box-sizing: border-box;
@@ -101,19 +105,40 @@ export const TextArea = styled.textarea`
 
 export const Button = styled.button`
     &{
-        width: fit-content;
+        width: 100%;
         margin: 0px auto;
         padding: 8px 12px;
         font-size: 18px;
         border-radius: 12px;
         border: 2px solid #8a8c8f;
+        transition: all ease-out 0.3s;
+    }
+
+    &:hover:not(:disabled){
+        cursor: pointer;
+        background-color: #242424;
+        color: white;
     }
 
 `
 
 export const ErrorText = styled.p`
     &{
+        @keyframes show {
+            0% {
+                transform: translate(0px, 50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translate(0px);
+                opacity: 1;
+            }
+        }
         color: #b40000;
         font-size: 14px;
+        animation-name: show;
+        animation-iteration-count: 1;
+        animation-duration: 0.4s;
+        animation-timing-function: ease-out;
     }
 `

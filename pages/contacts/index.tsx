@@ -3,11 +3,11 @@ import Telegram from 'assets/icons/telegram.svg'
 import VK from 'assets/icons/vk.svg'
 import Mail from 'assets/icons/mail.svg'
 import GithubSVG from "assets/icons/github.svg"
-import { FormEvent, Fragment, useState } from "react"
+import { Fragment, useEffect, useState } from "react"
 import Link from "next/link"
 import axios from "axios"
 import Head from "next/head"
-import { useForm } from "react-hook-form"
+import { useForm, useFormState } from "react-hook-form"
 import { Modal } from "@components/modal"
 
 interface FormValues {
@@ -18,7 +18,7 @@ interface FormValues {
 
 function Contacts() {
     const [showModal, setShowModal] = useState(false)
-    const { register, formState: { errors, isValid }, handleSubmit, reset } = useForm<FormValues>({
+    const { register, formState, handleSubmit, reset } = useForm<FormValues>({
         mode: "all"
     })
 
@@ -26,9 +26,9 @@ function Contacts() {
         setShowModal(false)
     }
 
-    const onSubmit = (data: FormValues) => {
+    const onSubmit = async (data: FormValues) => {
 
-        axios.post('/api/send_message', {
+        return axios.post('/api/send_message', {
             data
         })
             .then(() => {
@@ -65,7 +65,7 @@ function Contacts() {
                             }
                         })}
                             autoComplete='off' />
-                        {errors.name && <ErrorText>{errors.name.message}</ErrorText>}
+                        {formState.errors.name && <ErrorText>{formState.errors.name.message}</ErrorText>}
                     </label>
                     <label>
                         <span>Email</span>
@@ -80,7 +80,7 @@ function Contacts() {
                             }
                         })}
                             autoComplete='off' />
-                        {errors.email && <ErrorText>{errors.email.message}</ErrorText>}
+                        {formState.errors.email && <ErrorText>{formState.errors.email.message}</ErrorText>}
                     </label>
                     <label>
                         <span>Сообщение</span>
@@ -91,9 +91,9 @@ function Contacts() {
                                 value: 500
                             },
                         })} />
-                        {errors.message && <ErrorText>{errors.message.message}</ErrorText>}
+                        {formState.errors.message && <ErrorText>{formState.errors.message.message}</ErrorText>}
                     </label>
-                    <Button type="submit" disabled={!isValid}>Свяжитесь со мной</Button>
+                    <Button type="submit" disabled={formState.isSubmitting || !formState.isValid}>Свяжитесь со мной</Button>
                     {false && 'Загрузка!'}
                 </Form>
             </Container>

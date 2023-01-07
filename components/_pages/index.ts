@@ -54,18 +54,24 @@ export const StyledImage = styled(Image)`
 `
 
 export const DownloadButton = styled.a`
-    &{
+&{
         display: block;
         text-decoration: none;
         width: fit-content;
         margin-top: 20px;
         font-size: ${fluidTypography(480, 1440, 14, 22)};
-        font-family: 'open_sans_regular';
+        font-family: 'open_sans_bold';
         border-radius: 12px;
-        border: 1px solid white;
+        border: 3px solid black;
         background-color: black;
         color: white;
         padding: 12px 12px;
         cursor: pointer;
+        transition: 0.3s ease-out;
+    
+    }
+    &:hover{
+        background-color: transparent;
+        color: black;
     }
 `

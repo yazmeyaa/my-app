@@ -22,4 +22,5 @@ export const GlobalStyles = createGlobalStyle`
             min-height: 100vh;
             height: 100%;
         }
+
 `
