@@ -1,14 +1,7 @@
-import axios from "axios";
 import { NextApiRequest, NextApiResponse } from "next";
-import { StaticImageData } from "next/image";
+import { CardInterface } from "types/cards";
 
 
-interface CardInterface {
-    name: string
-    description: string
-    href: string
-    img: StaticImageData
-}
 
 const cards: CardInterface[] = [
     {

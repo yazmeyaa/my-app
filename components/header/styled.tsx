@@ -4,6 +4,8 @@ import styled from "styled-components";
 
 export const Container = styled.header`
     &{
+        margin: 0px auto;
+        max-width: 1440px;
         position: relative;
         display: flex;
         justify-content: space-between;

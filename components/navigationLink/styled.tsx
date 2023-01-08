@@ -11,17 +11,16 @@ interface NavigationLinkProps {
 
 export const NavigationLink = styled(Link) <NavigationLinkProps>`
     &{
-        text-decoration: ${props => { return props.$current ? 'underline' : 'none' }};
-        text-decoration-thickness: 3px;
         font-family: 'open_sans_bold';
         color:  ${props => props.color};
+        text-decoration: none;
     }
     &:visited{
         color: inherit;
     }
     &::after {
         content: '';
-        width: 0px;
+        width: ${props => {return props.$current ? '100%' : '0%'}};
         height: 2px;
         display: block;
         background: ${props => props.color};
