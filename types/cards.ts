@@ -5,4 +5,5 @@ export interface CardInterface {
     description: string
     href: string
     img: StaticImageData
+    githubUrl: string
 }

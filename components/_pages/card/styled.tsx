@@ -50,7 +50,7 @@ export const Description = styled.small`
 
 export const StyledLink = styled(Link)`
     &{
-        width: 80%;
+        width: 100%;
         font-size: ${fluidTypography(480, 1440, 16, 20)};
         box-sizing: border-box;
         background-color: black;
@@ -61,13 +61,23 @@ export const StyledLink = styled(Link)`
         text-decoration: none;
         transition: all ease-out 0.2s;
         user-select: none;
-        margin-top: auto;
-        margin-left: auto;
-        margin-right: auto;
+
         border-radius: 6px;
     }
     &:hover {
         color: black;
         background-color: white;
+    }
+`
+
+export const ButtonsContainer = styled.div`
+    &{
+        margin: 0px auto;
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        width: 100%;
     }
 `

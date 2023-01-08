@@ -1,16 +1,12 @@
 import { StaticImageData } from "next/image"
 import Link from "next/link"
-import { Container, Description, StyledImage, StyledLink, Title } from "./styled"
+import { CardInterface } from "types/cards"
+import { ButtonsContainer, Container, Description, StyledImage, StyledLink, Title } from "./styled"
 
 
-interface CardProps {
-    name: string
-    description: string
-    img: StaticImageData
-    href: string
-}
 
-function Card({ name, description, img, href }: CardProps) {
+
+function Card({ name, description, img, href, githubUrl }: CardInterface) {
     return (
         <Container>
             <Link href={href} target='_blank'>
@@ -20,9 +16,10 @@ function Card({ name, description, img, href }: CardProps) {
             <Description>
                 {description}
             </Description>
-            <StyledLink href={href} target='_blank'>
-                Смотреть в браузере
-            </StyledLink>
+            <ButtonsContainer>
+                <StyledLink href={href} target='_blank'>Смотреть в браузере</StyledLink>
+                <StyledLink href={githubUrl} target="_blank">Открыть в Github</StyledLink>
+            </ButtonsContainer>
         </Container>
     )
 }
