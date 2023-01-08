@@ -17,12 +17,19 @@ export const Container = styled.section`
         box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
         padding: 1rem;
         border-radius: 6px;
-        padding-bottom: 3rem;
+        transition: box-shadow ease 0.4s, transform ease-out 0.2s;
+    }
+    &:hover{
+        box-shadow: 0px 0px 20px rgba(206, 117, 0, 0.637);
+        transform: scale(1.05);
     }
 `
 
 export const StyledImage = styled(Image)`
     &{
+        border: 1px solid black;
+        border-radius: 6px;
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);;
         max-width: 320px;
         height: auto;
     }
@@ -54,10 +61,9 @@ export const StyledLink = styled(Link)`
         text-decoration: none;
         transition: all ease-out 0.2s;
         user-select: none;
-        position: absolute;
-        bottom: 12px;
-        left: 50%;
-        transform: translate(-50%);
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
         border-radius: 6px;
     }
     &:hover {
