@@ -6,7 +6,7 @@ import { CardInterface } from "types/cards";
 const cards: CardInterface[] = [
     {
         name: 'Мой сайт',
-        description: 'Сайт обо мне, моих проектах и прочем. Собственно, Вы здесь и находитесь. Технологии: NextJS, styled-components',
+        description: 'Сайт обо мне и моих проектах. Собственно, Вы здесь и находитесь. Технологии: NextJS, styled-components',
         href: 'https://yazmeyaa.itracers.xyz',
         img: require('assets/images/myWebsite.png'),
         githubUrl: "https://github.com/yazmeyaa/my-app"
@@ -20,7 +20,7 @@ const cards: CardInterface[] = [
     },
     {
         name: 'Погода',
-        description: 'Получение текущей погоды и прогноза с использованием ReactJS и ExpressJS',
+        description: 'Текущая погода и прогноз. Использованы ReactJS и ExpressJS',
         href: 'https://itracers.xyz/temp/yazmeyaa/weatherapp/',
         img: require('assets/images/weather.png').default,
         githubUrl: "https://github.com/yazmeyaa/weather-app-frontend"
