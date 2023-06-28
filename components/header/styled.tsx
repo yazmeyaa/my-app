@@ -67,6 +67,5 @@ export const NavigationList = styled.ul`
     }
     & > li {
         text-align: center;
-
     }
 `

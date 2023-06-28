@@ -27,7 +27,8 @@ export const Title = styled.h1`
 export const PageDescription = styled.p`
 &{
     align-self: center;
-    color: #909090;
+    color: #606060;
     font-size: ${fluidTypography(480, 1440, 14, 18)};
-    line-height: 1.3;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
 }`

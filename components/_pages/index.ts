@@ -33,12 +33,13 @@ export const About = styled.section`
         line-height: 1.2;
     }
 
-    & > small {
+    & > p {
         display: inline-block;
         margin-top: 8px;
         font-size: ${fluidTypography(480, 1440, 14, 18)};
         color: #666666;
         line-height: 1.4;
+        font-size: 1.5rem;
     }
 `
 
@@ -50,6 +51,8 @@ export const StyledImage = styled(Image)`
         height: auto;
         object-fit: fill;
         mask-image: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+        pointer-events: none;
+        user-select: none;
     }
 `
 

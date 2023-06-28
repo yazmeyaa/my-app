@@ -14,6 +14,7 @@ export const NavigationLink = styled(Link) <NavigationLinkProps>`
         font-family: 'open_sans_bold';
         color:  ${props => props.color};
         text-decoration: none;
+        font-size: 1.2rem;
     }
     &:visited{
         color: inherit;
