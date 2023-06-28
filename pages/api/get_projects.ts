@@ -5,6 +5,13 @@ import { CardInterface } from "types/cards";
 
 const cards: CardInterface[] = [
     {
+        name: 'Virtual scrolling table',
+        description: 'Пример выполнения виртуальной прокрутки элемента. В DOM-дерево монтируется лишь то, что может попасть во вьюпорт, а всё остальное пространство занимают пустые блоки с динамической высотой.',
+        href: 'https://yazmeyaa.github.io/virtual_scroll_table/',
+        img: require('assets/images/virtualScroll.png'),
+        githubUrl: "https://github.com/yazmeyaa/virtual_scroll_table"
+    },
+    {
         name: 'Мой сайт',
         description: 'Сайт обо мне и моих проектах. Собственно, Вы здесь и находитесь. Технологии: NextJS, styled-components',
         href: 'https://yazmeyaa.itracers.xyz',
