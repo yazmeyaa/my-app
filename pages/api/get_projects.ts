@@ -5,6 +5,18 @@ import { CardInterface } from "types/cards";
 
 const cards: CardInterface[] = [
     {
+        name: 'Modern Spreadsheet',
+        description: 'Основанная на CanvasAPI таблица. Поддержка нативного скрола, высокая производительность, с лёгкостью может рендерить миллионы клеток. Опубликовано в npmjs.com.',
+        img: require('assets/images/spreadsheet.png').default,
+        githubUrl: "https://github.com/yazmeyaa/modern_spreadsheet"
+    },
+    {
+        name: 'Mafia game',
+        description: 'Fullstack приложение для игры в мафию. Стек: Turborepo, SvelteKit, ExpressJS.',
+        img: require('assets/images/mafia.png').default,
+        githubUrl: "https://github.com/yazmeyaa/mafia_game"
+    },
+    {
         name: 'Virtual scrolling table',
         description: 'Пример выполнения виртуальной прокрутки элемента. В DOM-дерево монтируется лишь то, что может попасть во вьюпорт, а всё остальное пространство занимают пустые блоки с динамической высотой.',
         href: 'https://yazmeyaa.github.io/virtual_scroll_table/',
