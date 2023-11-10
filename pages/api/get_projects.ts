@@ -5,13 +5,6 @@ import { CardInterface } from "types/cards";
 
 const cards: CardInterface[] = [
     {
-        name: 'Modern Spreadsheet',
-        description: 'Spreadsheet таблица выполненная с TypeScript и Canvas 2D API',
-        href: 'https://yazmeyaa.github.io/modern_spreadsheet/',
-        img: require('assets/images/modern_spreadsheet.png'),
-        githubUrl: "https://github.com/yazmeyaa/modern_spreadsheet"
-    },
-    {
         name: 'WebGL Cube',
         description: 'Трёхмерный куб, который можно вращать в пространстве. Выполнено с использованием WebGL.',
         href: 'https://yazmeyaa.github.io/webgl_cube3d/',
