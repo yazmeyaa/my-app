@@ -21,6 +21,7 @@ const cards: CardInterface[] = [
     {
         name: 'Modern Spreadsheet',
         description: 'Основанная на CanvasAPI таблица. Поддержка нативного скрола, высокая производительность, с лёгкостью может рендерить миллионы клеток. Опубликовано в npmjs.com.',
+        href: 'https://yazmeyaa.github.io/modern_spreadsheet/',
         img: require('assets/images/spreadsheet.png').default,
         githubUrl: "https://github.com/yazmeyaa/modern_spreadsheet"
     },
