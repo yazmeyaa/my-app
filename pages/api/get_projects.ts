@@ -13,14 +13,14 @@ const cards: CardInterface[] = [
     },
     {
         name: 'WebGL Clock',
-        description: 'Аналоговые часы выполненные с технологией WebGL.',
+        description: 'Аналоговые часы, выполненные с технологией WebGL.',
         href: 'https://yazmeyaa.github.io/webgl_clock/',
         img: require('assets/images/webgl_clock.png'),
         githubUrl: "https://github.com/yazmeyaa/webgl_clock"
     },
     {
         name: 'Modern Spreadsheet',
-        description: 'Основанная на CanvasAPI таблица. Поддержка нативного скрола, высокая производительность, с лёгкостью может рендерить миллионы клеток. Опубликовано в npmjs.com.',
+        description: 'Основанная на CanvasAPI таблица. Поддержка нативного скролла, высокая производительность, с лёгкостью может рендерить миллионы клеток. Опубликовано в npmjs.com.',
         href: 'https://yazmeyaa.github.io/modern_spreadsheet/',
         img: require('assets/images/spreadsheet.png').default,
         githubUrl: "https://github.com/yazmeyaa/modern_spreadsheet"
