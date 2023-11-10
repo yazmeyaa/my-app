@@ -13,7 +13,7 @@ const cards: CardInterface[] = [
     },
     {
         name: 'WebGL Clock',
-        description: 'Аналоговые часы выполненые с технологией WebGL.',
+        description: 'Аналоговые часы выполненные с технологией WebGL.',
         href: 'https://yazmeyaa.github.io/webgl_clock/',
         img: require('assets/images/webgl_clock.png'),
         githubUrl: "https://github.com/yazmeyaa/webgl_clock"
