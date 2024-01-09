@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import Zekton from 'public/fonts/Zekton.ttf'
 
 
 export const GlobalStyles = createGlobalStyle`

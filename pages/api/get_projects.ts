@@ -5,6 +5,13 @@ import { CardInterface } from "types/cards";
 
 const cards: CardInterface[] = [
     {
+        name: 'Bouncing Balls',
+        description: 'В окружности появляется один шар. Когда шар соприкасается с другим шаром - они взаимоуничтожаются. Когда шар касается края окружности - создаётся ещё один шар.',
+        href: 'https://yazmeyaa.github.io/bouncing_balls/',
+        img: require('assets/images/bouncing_balls.png'),
+        githubUrl: "https://github.com/yazmeyaa/bouncing_balls"
+    },
+    {
         name: 'WebGL Cube',
         description: 'Трёхмерный куб, который можно вращать в пространстве. Выполнено с использованием WebGL.',
         href: 'https://yazmeyaa.github.io/webgl_cube3d/',
