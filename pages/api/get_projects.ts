@@ -6,7 +6,7 @@ import { CardInterface } from "types/cards";
 const cards: CardInterface[] = [
     {
         name: 'Bouncing Balls',
-        description: 'В окружности появляется один шар. Когда шар соприкасается с другим шаром - они взаимоуничтожаются. Когда шар касается края окружности - создаётся ещё один шар.',
+        description: 'Внутри окружности появляется один шар. Когда шар касается окружности — создаётся ещё один шар. Когда два шара соприкасаются друг с другом — оба уничтожаются.',
         href: 'https://yazmeyaa.github.io/bouncing_balls/',
         img: require('assets/images/bouncing_balls.png'),
         githubUrl: "https://github.com/yazmeyaa/bouncing_balls"
