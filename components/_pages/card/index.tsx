@@ -1,28 +1,42 @@
-import { StaticImageData } from "next/image"
-import Link from "next/link"
-import { CardInterface } from "types/cards"
-import { ButtonsContainer, Container, Description, StyledImage, StyledLink, Title } from "./styled"
-
-
-
+import { StaticImageData } from "next/image";
+import Link from "next/link";
+import { CardInterface } from "types/cards";
+import {
+  ButtonsContainer,
+  Container,
+  Description,
+  StyledImage,
+  StyledLink,
+  Title,
+} from "./styled";
 
 function Card({ name, description, img, href, githubUrl }: CardInterface) {
-    return (
-        <Container>
-            {href ? <Link href={href} target='_blank'>
-                <StyledImage alt={name} src={img} />
-            </Link> : <StyledImage alt={name} src={img} />}
+  return (
+    <Container>
+      {href ? (
+        <Link href={href} target="_blank">
+          <StyledImage alt={name} width={450} height={450} src={`/images/${img}`} />
+        </Link>
+      ) : (
+        <StyledImage alt={name} width={450} height={450} src={`/images/${img}`} />
+      )}
 
-            <Title>{name}</Title>
-            <Description>
-                {description}
-            </Description>
-            <ButtonsContainer>
-                {href && <StyledLink href={href} target='_blank'>Смотреть в браузере</StyledLink>}
-                {githubUrl && <StyledLink href={githubUrl} target="_blank">Открыть в Github</StyledLink>}
-            </ButtonsContainer>
-        </Container>
-    )
+      <Title>{name}</Title>
+      <Description>{description}</Description>
+      <ButtonsContainer>
+        {href && (
+          <StyledLink href={href} target="_blank">
+            Смотреть в браузере
+          </StyledLink>
+        )}
+        {githubUrl && (
+          <StyledLink href={githubUrl} target="_blank">
+            Открыть в Github
+          </StyledLink>
+        )}
+      </ButtonsContainer>
+    </Container>
+  );
 }
 
-export { Card }
+export { Card };
